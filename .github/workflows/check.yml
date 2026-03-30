@@ -1,0 +1,16 @@
+on:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          show-progress: false
+      - uses: pnpm/action-setup@v5
+        with:
+          cache: true
+          run_install: |
+            - args: [--prefer-offline, --frozen-lockfile]
+      - run: pnpm check
