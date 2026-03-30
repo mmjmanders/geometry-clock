@@ -7,8 +7,11 @@ import tailwindcss from '@tailwindcss/vite'
 
 import { VitePWA } from 'vite-plugin-pwa'
 
+const { APP_BASE } = process.env
+
 // https://vite.dev/config/
 export default defineConfig({
+  base: APP_BASE || '/',
   plugins: [
     vue(),
     tailwindcss(),
