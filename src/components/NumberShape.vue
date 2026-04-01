@@ -24,7 +24,9 @@ const points = computed<string>(() =>
 
 <template>
   <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-    <polygon transform="translate(100, 100)" :points="points" />
+    <g transform="translate(100, 100)">
+      <polygon v-if="digit > 1" :points="points" stroke-width="2" fill="none" />
+    </g>
   </svg>
 </template>
 
