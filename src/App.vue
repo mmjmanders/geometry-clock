@@ -4,7 +4,7 @@ import GeometryClock from '@/components/GeometryClock.vue'
 
 <template>
   <header>
-    <h1>Geomtery Clock</h1>
+    <h1>Geometry Clock</h1>
   </header>
   <main>
     <GeometryClock />
