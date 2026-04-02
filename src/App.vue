@@ -15,6 +15,6 @@ import GeometryClock from '@/components/GeometryClock.vue'
 @reference './main.css';
 
 h1 {
-  @apply text-neon-yellow drop-shadow-lg drop-shadow-neon-yellow/50;
+  @apply text-primary drop-shadow-lg drop-shadow-primary/50;
 }
 </style>

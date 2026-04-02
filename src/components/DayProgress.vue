@@ -37,7 +37,7 @@ const endPosition = computed<{ x: number; y: number }>(() => {
       :stroke-dasharray="circumference"
       :stroke-dashoffset="dashOffset"
     />
-    <circle :cx="endPosition.x" :cy="endPosition.y" r="1" class="dot" />
+    <circle :cx="endPosition.x" :cy="endPosition.y" r="1" class="dot" stroke-width="1" />
   </g>
 </template>
 
@@ -49,6 +49,6 @@ circle {
 }
 
 .dot {
-  @apply fill-neon-pink stroke-none;
+  @apply fill-neon-pink;
 }
 </style>
