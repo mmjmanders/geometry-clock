@@ -12,6 +12,7 @@ import { defineConfig, devices } from '@playwright/test'
  */
 export default defineConfig({
   testDir: './e2e',
+  globalTimeout: 3_600_000,
   /* Maximum time one test can run for. */
   timeout: process.env.CI ? 60_000 : 30_000,
   expect: {
