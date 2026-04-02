@@ -7,9 +7,21 @@
 
   /* Custom theme variables */
   --font-headings: var(--font-serif);
+  --color-background: #181e21;
+  --color-primary: #c0c0c0;
+  --color-neon-purple: #a54eca;
+  --color-neon-pink: #e0008e;
+  --color-neon-green: #4cd95d;
+  --color-neon-yellow: #ffca00;
+  --color-neon-blue: #0088ff;
 }
 
 @layer base {
+  html,
+  body {
+    @apply bg-background text-primary;
+  }
+
   h1,
   h2,
   h3,
@@ -17,5 +29,27 @@
   h5,
   h6 {
     @apply font-headings;
+  }
+
+  header {
+    @apply w-full flex justify-center items-center h-fit;
+  }
+
+  header > h1 {
+    @apply text-4xl sm:text-6xl md:text-7xl my-2 sm:my-4 md:my-5;
+  }
+
+  main {
+    @apply w-full max-w-4xl mx-auto p-4;
+  }
+}
+
+@layer components {
+  #app {
+    @apply grid grid-rows-[auto_1fr];
+  }
+
+  .clock-container {
+    @apply aspect-square;
   }
 }
