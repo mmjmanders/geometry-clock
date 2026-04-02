@@ -5,7 +5,7 @@ const props = defineProps<{
   timestamp: Date
 }>()
 
-const radius = 95
+const radius = 90
 const circumference = 2 * Math.PI * radius
 
 const progressFraction = computed<number>(() => {
@@ -37,19 +37,18 @@ const endPosition = computed<{ x: number; y: number }>(() => {
       :stroke-dasharray="circumference"
       :stroke-dashoffset="dashOffset"
     />
-    <circle :cx="radius" cy="0" r="1" class="dot" />
-    <circle :cx="endPosition.x" :cy="endPosition.y" r="2" class="dot" />
+    <circle :cx="endPosition.x" :cy="endPosition.y" r="1" class="dot" />
   </g>
 </template>
 
 <style scoped>
-@reference 'tailwindcss';
+@reference '../main.css';
 
 circle {
-  @apply stroke-cyan-400 drop-shadow-sm drop-shadow-cyan-400/50;
+  @apply stroke-neon-pink drop-shadow-sm drop-shadow-neon-pink/50;
 }
 
 .dot {
-  @apply fill-cyan-400 stroke-none;
+  @apply fill-neon-pink stroke-none;
 }
 </style>

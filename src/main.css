@@ -7,12 +7,19 @@
 
   /* Custom theme variables */
   --font-headings: var(--font-serif);
+  --color-background: #181e21;
+  --color-primary: #c0c0c0;
+  --color-neon-purple: #a54eca;
+  --color-neon-pink: #e0008e;
+  --color-neon-green: #4cd95d;
+  --color-neon-yellow: #ffca00;
+  --color-neon-blue: #0088ff;
 }
 
 @layer base {
   html,
   body {
-    @apply bg-stone-800 text-stone-100;
+    @apply bg-background text-primary;
   }
 
   h1,
@@ -25,7 +32,7 @@
   }
 
   header {
-    @apply w-full flex justify-center items-center h-fit bg-stone-600 border-b-2 border-b-stone-700;
+    @apply w-full flex justify-center items-center h-fit;
   }
 
   header > h1 {
