@@ -19,9 +19,6 @@ jobs:
     needs: lint
     timeout-minutes: 60
     runs-on: ubuntu-latest
-    container:
-      image: mcr.microsoft.com/playwright:v1.59.1-noble
-      options: --user 1001
     steps:
       - uses: actions/checkout@v6
         with:
@@ -36,4 +33,5 @@ jobs:
         with:
           node-version-file: .nvmrc
       - run: pnpm build-only
+      - run: pnpm exec playwright install --with-deps
       - run: pnpm test:e2e --only-changed=origin/${{ github.base_ref }}
