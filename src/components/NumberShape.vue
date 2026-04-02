@@ -32,8 +32,12 @@ const points = computed<string>(() =>
 <style scoped>
 @reference '../main.css';
 
+circle {
+  @apply drop-shadow-sm;
+}
+
 .hours {
-  @apply stroke-neon-green  drop-shadow-sm drop-shadow-neon-green/50;
+  @apply stroke-neon-green drop-shadow-neon-green/50;
 }
 
 circle.hours {
@@ -41,7 +45,7 @@ circle.hours {
 }
 
 .minutes {
-  @apply stroke-neon-blue  drop-shadow-sm drop-shadow-neon-blue/50;
+  @apply stroke-neon-blue drop-shadow-neon-blue/50;
 }
 
 circle.minutes {
@@ -49,7 +53,7 @@ circle.minutes {
 }
 
 .seconds {
-  @apply stroke-neon-yellow  drop-shadow-sm drop-shadow-neon-yellow/50;
+  @apply stroke-neon-yellow drop-shadow-neon-yellow/50;
 }
 
 circle.seconds {

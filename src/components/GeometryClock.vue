@@ -20,13 +20,13 @@ const secondRight = computed<number>(() => seconds.value % 10)
 
 <template>
   <div class="clock-container">
-    <svg viewBox="-100 -100 200 200" xmlns="http://www.w3.org/2000/svg">
-      <DayProgress :radius="90" :timestamp="timestamp" />
-      <NumberShape :radius="95" type="hours" :digit="hourLeft" />
-      <NumberShape :radius="90" type="hours" :digit="hourRight" />
-      <NumberShape :radius="60" type="minutes" :digit="minuteLeft" />
-      <NumberShape :radius="50" type="minutes" :digit="minuteRight" />
-      <NumberShape :radius="20" type="seconds" :digit="secondLeft" />
+    <svg viewBox="-200 -200 400 400" xmlns="http://www.w3.org/2000/svg">
+      <DayProgress :radius="178" :timestamp="timestamp" />
+      <NumberShape :radius="192" type="hours" :digit="hourLeft" />
+      <NumberShape :radius="178" type="hours" :digit="hourRight" />
+      <NumberShape :radius="88" type="minutes" :digit="minuteLeft" />
+      <NumberShape :radius="43" type="minutes" :digit="minuteRight" />
+      <NumberShape :radius="21" type="seconds" :digit="secondLeft" />
       <NumberShape :radius="10" type="seconds" :digit="secondRight" />
     </svg>
   </div>
