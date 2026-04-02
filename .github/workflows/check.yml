@@ -18,9 +18,13 @@ jobs:
   e2e:
     needs: lint
     runs-on: ubuntu-latest
+    container:
+      image: mcr.microsoft.com/playwright:v1.58.2-noble
+      options: --user 1001
     steps:
       - uses: actions/checkout@v6
         with:
+          fetch-depth: 0
           show-progress: false
       - uses: pnpm/action-setup@v5
         with:
@@ -30,6 +34,5 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version-file: .nvmrc
-      - run: pnpm exec playwright install --with-deps
       - run: pnpm build-only
-      - run: pnpm test:e2e
+      - run: pnpm test:e2e --only-changed=origin/${{ github.base_ref }}
