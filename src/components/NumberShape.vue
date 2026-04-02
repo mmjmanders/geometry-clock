@@ -5,6 +5,7 @@ const props = defineProps<{
   radius: number
   digit: number
   type: 'hours' | 'minutes' | 'seconds'
+  pos: 'left' | 'right'
 }>()
 
 const points = computed<string>(() =>
@@ -20,10 +21,12 @@ const points = computed<string>(() =>
     .map(({ x, y }) => `${x},${y}`)
     .join(' '),
 )
+
+const id = computed<string>(() => `clock-${props.type}-${props.pos}`)
 </script>
 
 <template>
-  <g transform="rotate(-90)">
+  <g :id="id" transform="rotate(-90)">
     <circle v-if="digit === 1" :cx="radius" cy="0" r="1" :class="type" stroke-width="1" />
     <polygon v-else-if="digit > 1" :points="points" stroke-width="1" fill="none" :class="type" />
   </g>
