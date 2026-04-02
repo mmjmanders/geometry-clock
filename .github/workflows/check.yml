@@ -2,7 +2,7 @@ on:
   pull_request:
 
 jobs:
-  check:
+  lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
@@ -14,3 +14,22 @@ jobs:
           run_install: |
             - args: [--prefer-offline, --frozen-lockfile]
       - run: pnpm check
+
+  e2e:
+    needs: lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          show-progress: false
+      - uses: pnpm/action-setup@v5
+        with:
+          cache: true
+          run_install: |
+            - args: [--prefer-offline, --frozen-lockfile]
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: .nvmrc
+      - run: pnpm exec playwright install --with-deps
+      - run: pnpm build-only
+      - run: pnpm test:e2e
