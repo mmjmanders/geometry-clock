@@ -2,11 +2,11 @@
 import { computed } from 'vue'
 
 const props = defineProps<{
+  radius: number
   timestamp: Date
 }>()
 
-const radius = 90
-const circumference = 2 * Math.PI * radius
+const circumference = 2 * Math.PI * props.radius
 
 const progressFraction = computed<number>(() => {
   const { timestamp } = props
@@ -21,8 +21,8 @@ const dashOffset = computed<number>(() => circumference * (1 - progressFraction.
 const endPosition = computed<{ x: number; y: number }>(() => {
   const theta = progressFraction.value * 2 * Math.PI
   return {
-    x: radius * Math.cos(theta),
-    y: radius * Math.sin(theta),
+    x: props.radius * Math.cos(theta),
+    y: props.radius * Math.sin(theta),
   }
 })
 </script>
