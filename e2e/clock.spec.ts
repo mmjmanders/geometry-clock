@@ -98,7 +98,7 @@ test('should display progress indicator', async ({ page }) => {
     secondLeftExpected,
     secondRightExpected,
   }) => {
-    test(`testing with ${timestamp.toISOString()}`, async ({ page }) => {
+    test(`testing visibility of SVG elements with ${timestamp.toISOString()}`, async ({ page }) => {
       await page.clock.setFixedTime(timestamp)
       await page.goto('/')
       await expect(page.locator('#clock-hours-left .hours')).toHaveCount(Number(hourLeftExpected))

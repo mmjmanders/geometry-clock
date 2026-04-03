@@ -21,6 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: mcr.microsoft.com/playwright:v1.59.1-noble
+      options: --user 1001
     strategy:
       fail-fast: false
       matrix:
@@ -39,7 +40,6 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version-file: .nvmrc
-      - run: pnpm exec playwright install-deps
       - run: pnpm build-only
       - run: pnpm test:e2e --only-changed=origin/${{ github.base_ref }} --shard=${{ matrix.shardIndex }}/${{ matrix.shardTotal }}
       - if: ${{ !cancelled() }}
