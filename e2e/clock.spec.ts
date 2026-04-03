@@ -98,7 +98,7 @@ test('should display progress indicator', async ({ page }) => {
     secondLeftExpected,
     secondRightExpected,
   }) => {
-    test.skip(`testing with ${timestamp.toISOString()}`, async ({ page }) => {
+    test(`testing with ${timestamp.toISOString()}`, async ({ page }) => {
       await page.clock.setFixedTime(timestamp)
       await page.goto('/')
       await expect(page.locator('#clock-hours-left .hours')).toHaveCount(Number(hourLeftExpected))
