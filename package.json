@@ -24,6 +24,7 @@
     "@fontsource-variable/merriweather": "^5.2.6",
     "@fontsource-variable/montserrat": "^5.2.8",
     "@fontsource-variable/roboto-mono": "^5.2.8",
+    "@iconify-vue/fa7-brands": "^1.0.3",
     "tailwindcss": "^4.2.2",
     "vue": "^3.5.32"
   },

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import GeometryClock from '@/components/GeometryClock.vue'
+import GitAltIcon from '@iconify-vue/fa7-brands/git-alt'
 
 const { VITE_APP_VERSION } = import.meta.env
 const version = VITE_APP_VERSION || 'dev'
@@ -8,7 +9,10 @@ const version = VITE_APP_VERSION || 'dev'
 <template>
   <header>
     <h1>Geometry Clock</h1>
-    <span class="version">{{ version }}</span>
+    <div class="version">
+      <GitAltIcon />
+      {{ version }}
+    </div>
   </header>
   <main>
     <GeometryClock />

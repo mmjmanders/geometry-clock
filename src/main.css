@@ -54,6 +54,10 @@
   }
 
   .version {
-    @apply font-mono text-xs absolute top-2 right-2;
+    @apply font-mono text-sm absolute top-2 right-2 flex items-center gap-0.5;
+  }
+
+  .version > svg {
+    @apply size-5;
   }
 }
