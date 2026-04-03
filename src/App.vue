@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import GeometryClock from '@/components/GeometryClock.vue'
-import GitAltIcon from '@iconify-vue/fa7-brands/git-alt'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 const { VITE_APP_VERSION } = import.meta.env
 const version = VITE_APP_VERSION || 'dev'
@@ -10,7 +10,7 @@ const version = VITE_APP_VERSION || 'dev'
   <header>
     <h1>Geometry Clock</h1>
     <div class="version">
-      <GitAltIcon />
+      <FontAwesomeIcon :icon="['fab', 'git-alt']" />
       {{ version }}
     </div>
   </header>
