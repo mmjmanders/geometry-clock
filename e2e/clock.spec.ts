@@ -43,16 +43,21 @@ test('should display progress indicator', async ({ page }) => {
       secondRightCircles: i % 10 === 0 ? 0 : i % 10 === 1 ? 1 : i % 10,
     })),
 ].forEach(
-  ({
-    timestamp,
-    hourLeftCircles,
-    hourRightCircles,
-    minuteLeftCircles,
-    minuteRightCircles,
-    secondLeftCircles,
-    secondRightCircles,
-  }) => {
-    test(`testing visibility of SVG elements with ${timestamp.toISOString()}`, async ({ page }) => {
+  (
+    {
+      timestamp,
+      hourLeftCircles,
+      hourRightCircles,
+      minuteLeftCircles,
+      minuteRightCircles,
+      secondLeftCircles,
+      secondRightCircles,
+    },
+    i,
+  ) => {
+    test(`testing visibility of SVG elements with ${timestamp.toISOString()} with index ${i}`, async ({
+      page,
+    }) => {
       await page.clock.setFixedTime(timestamp)
       await page.goto('/')
       await expect(page.locator('#clock-hours-left circle')).toHaveCount(hourLeftCircles)
