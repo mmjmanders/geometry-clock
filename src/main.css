@@ -32,7 +32,7 @@
   }
 
   header {
-    @apply w-full flex justify-center items-center h-fit;
+    @apply w-full flex justify-center items-center h-fit text-primary text-shadow-md text-shadow-primary/50;
   }
 
   header > h1 {
@@ -51,5 +51,9 @@
 
   .clock-container {
     @apply aspect-square;
+  }
+
+  .version {
+    @apply font-mono text-sm absolute top-2 right-2 flex items-center gap-0.5;
   }
 }
