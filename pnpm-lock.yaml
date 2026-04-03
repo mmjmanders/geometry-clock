@@ -48,16 +48,16 @@ importers:
         version: 3.4.2(prettier@3.8.1)
       '@tailwindcss/vite':
         specifier: ^4.2.2
-        version: 4.2.2(vite@8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.0)(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3))
+        version: 4.2.2(vite@8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.2)(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3))
       '@tsconfig/node24':
         specifier: ^24.0.4
         version: 24.0.4
       '@types/node':
-        specifier: ^24.12.0
-        version: 24.12.0
+        specifier: ^24.12.2
+        version: 24.12.2
       '@vitejs/plugin-vue':
         specifier: ^6.0.5
-        version: 6.0.5(vite@8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.0)(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3))(vue@3.5.32(typescript@5.9.3))
+        version: 6.0.5(vite@8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.2)(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3))(vue@3.5.32(typescript@5.9.3))
       '@vue/eslint-config-typescript':
         specifier: ^14.7.0
         version: 14.7.0(eslint-plugin-vue@10.8.0(@typescript-eslint/parser@8.58.0(eslint@10.1.0(jiti@2.6.1))(typescript@5.9.3))(eslint@10.1.0(jiti@2.6.1))(vue-eslint-parser@10.4.0(eslint@10.1.0(jiti@2.6.1))))(eslint@10.1.0(jiti@2.6.1))(typescript@5.9.3)
@@ -108,13 +108,13 @@ importers:
         version: 5.9.3
       vite:
         specifier: ^8.0.3
-        version: 8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.0)(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3)
+        version: 8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.2)(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3)
       vite-plugin-pwa:
         specifier: ^1.2.0
-        version: 1.2.0(vite@8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.0)(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3))(workbox-build@7.4.0)(workbox-window@7.4.0)
+        version: 1.2.0(vite@8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.2)(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3))(workbox-build@7.4.0)(workbox-window@7.4.0)
       vite-plugin-vue-devtools:
         specifier: ^8.1.1
-        version: 8.1.1(vite@8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.0)(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3))(vue@3.5.32(typescript@5.9.3))
+        version: 8.1.1(vite@8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.2)(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3))(vue@3.5.32(typescript@5.9.3))
       vue-tsc:
         specifier: ^3.2.6
         version: 3.2.6(typescript@5.9.3)
@@ -1183,8 +1183,8 @@ packages:
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
 
-  '@types/node@24.12.0':
-    resolution: {integrity: sha512-GYDxsZi3ChgmckRT9HPU0WEhKLP08ev/Yfcq2AstjrDASOYCSXeyjDsHg4v5t4jOj7cyDX3vmprafKlWIG9MXQ==}
+  '@types/node@24.12.2':
+    resolution: {integrity: sha512-A1sre26ke7HDIuY/M23nd9gfB+nrmhtYyMINbjI1zHJxYteKR6qSMX56FsmjMcDb3SMcjJg5BiRRgOCC/yBD0g==}
 
   '@types/resolve@1.20.2':
     resolution: {integrity: sha512-60BCwRFOZCQhDncwQdxxeOEEkbc5dIMccYLwbxsS4TUNeVECQ/pBJ0j09mrHOl/JJvpRPGwO9SvE4nR2Nb/a4Q==}
@@ -4089,12 +4089,12 @@ snapshots:
       '@tailwindcss/oxide-win32-arm64-msvc': 4.2.2
       '@tailwindcss/oxide-win32-x64-msvc': 4.2.2
 
-  '@tailwindcss/vite@4.2.2(vite@8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.0)(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3))':
+  '@tailwindcss/vite@4.2.2(vite@8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.2)(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3))':
     dependencies:
       '@tailwindcss/node': 4.2.2
       '@tailwindcss/oxide': 4.2.2
       tailwindcss: 4.2.2
-      vite: 8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.0)(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3)
+      vite: 8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.2)(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3)
 
   '@tsconfig/node24@24.0.4': {}
 
@@ -4111,7 +4111,7 @@ snapshots:
 
   '@types/json-schema@7.0.15': {}
 
-  '@types/node@24.12.0':
+  '@types/node@24.12.2':
     dependencies:
       undici-types: 7.16.0
 
@@ -4210,10 +4210,10 @@ snapshots:
       '@typescript-eslint/types': 8.58.0
       eslint-visitor-keys: 5.0.1
 
-  '@vitejs/plugin-vue@6.0.5(vite@8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.0)(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3))(vue@3.5.32(typescript@5.9.3))':
+  '@vitejs/plugin-vue@6.0.5(vite@8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.2)(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3))(vue@3.5.32(typescript@5.9.3))':
     dependencies:
       '@rolldown/pluginutils': 1.0.0-rc.2
-      vite: 8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.0)(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3)
+      vite: 8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.2)(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3)
       vue: 3.5.32(typescript@5.9.3)
 
   '@volar/language-core@2.4.28':
@@ -5877,17 +5877,17 @@ snapshots:
 
   util-deprecate@1.0.2: {}
 
-  vite-dev-rpc@1.1.0(vite@8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.0)(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3)):
+  vite-dev-rpc@1.1.0(vite@8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.2)(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3)):
     dependencies:
       birpc: 2.9.0
-      vite: 8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.0)(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3)
-      vite-hot-client: 2.1.0(vite@8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.0)(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3))
+      vite: 8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.2)(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3)
+      vite-hot-client: 2.1.0(vite@8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.2)(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3))
 
-  vite-hot-client@2.1.0(vite@8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.0)(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3)):
+  vite-hot-client@2.1.0(vite@8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.2)(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3)):
     dependencies:
-      vite: 8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.0)(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3)
+      vite: 8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.2)(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3)
 
-  vite-plugin-inspect@11.3.3(vite@8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.0)(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3)):
+  vite-plugin-inspect@11.3.3(vite@8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.2)(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3)):
     dependencies:
       ansis: 4.2.0
       debug: 4.4.3
@@ -5897,37 +5897,37 @@ snapshots:
       perfect-debounce: 2.1.0
       sirv: 3.0.2
       unplugin-utils: 0.3.1
-      vite: 8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.0)(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3)
-      vite-dev-rpc: 1.1.0(vite@8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.0)(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3))
+      vite: 8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.2)(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3)
+      vite-dev-rpc: 1.1.0(vite@8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.2)(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3))
     transitivePeerDependencies:
       - supports-color
 
-  vite-plugin-pwa@1.2.0(vite@8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.0)(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3))(workbox-build@7.4.0)(workbox-window@7.4.0):
+  vite-plugin-pwa@1.2.0(vite@8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.2)(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3))(workbox-build@7.4.0)(workbox-window@7.4.0):
     dependencies:
       debug: 4.4.3
       pretty-bytes: 6.1.1
       tinyglobby: 0.2.15
-      vite: 8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.0)(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3)
+      vite: 8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.2)(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3)
       workbox-build: 7.4.0
       workbox-window: 7.4.0
     transitivePeerDependencies:
       - supports-color
 
-  vite-plugin-vue-devtools@8.1.1(vite@8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.0)(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3))(vue@3.5.32(typescript@5.9.3)):
+  vite-plugin-vue-devtools@8.1.1(vite@8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.2)(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3))(vue@3.5.32(typescript@5.9.3)):
     dependencies:
       '@vue/devtools-core': 8.1.1(vue@3.5.32(typescript@5.9.3))
       '@vue/devtools-kit': 8.1.1
       '@vue/devtools-shared': 8.1.1
       sirv: 3.0.2
-      vite: 8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.0)(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3)
-      vite-plugin-inspect: 11.3.3(vite@8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.0)(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3))
-      vite-plugin-vue-inspector: 5.4.0(vite@8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.0)(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3))
+      vite: 8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.2)(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3)
+      vite-plugin-inspect: 11.3.3(vite@8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.2)(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3))
+      vite-plugin-vue-inspector: 5.4.0(vite@8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.2)(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3))
     transitivePeerDependencies:
       - '@nuxt/kit'
       - supports-color
       - vue
 
-  vite-plugin-vue-inspector@5.4.0(vite@8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.0)(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3)):
+  vite-plugin-vue-inspector@5.4.0(vite@8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.2)(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3)):
     dependencies:
       '@babel/core': 7.29.0
       '@babel/plugin-proposal-decorators': 7.29.0(@babel/core@7.29.0)
@@ -5938,11 +5938,11 @@ snapshots:
       '@vue/compiler-dom': 3.5.32
       kolorist: 1.8.0
       magic-string: 0.30.21
-      vite: 8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.0)(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3)
+      vite: 8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.2)(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3)
     transitivePeerDependencies:
       - supports-color
 
-  vite@8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.0)(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3):
+  vite@8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@24.12.2)(jiti@2.6.1)(terser@5.46.1)(yaml@2.8.3):
     dependencies:
       lightningcss: 1.32.0
       picomatch: 4.0.4
@@ -5950,7 +5950,7 @@ snapshots:
       rolldown: 1.0.0-rc.12(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)
       tinyglobby: 0.2.15
     optionalDependencies:
-      '@types/node': 24.12.0
+      '@types/node': 24.12.2
       fsevents: 2.3.3
       jiti: 2.6.1
       terser: 5.46.1
