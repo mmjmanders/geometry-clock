@@ -2,7 +2,7 @@ on:
   pull_request:
 
 jobs:
-  check:
+  lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
@@ -14,3 +14,58 @@ jobs:
           run_install: |
             - args: [--prefer-offline, --frozen-lockfile]
       - run: pnpm check
+
+  e2e:
+    needs: lint
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    container:
+      image: mcr.microsoft.com/playwright:v1.59.1-noble
+      options: --user 1001
+    strategy:
+      fail-fast: false
+      matrix:
+        shardIndex: [ 1, 2, 3, 4 ]
+        shardTotal: [ 4 ]
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          show-progress: false
+      - uses: pnpm/action-setup@v5
+        with:
+          cache: true
+          run_install: |
+            - args: [--prefer-offline, --frozen-lockfile]
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: .nvmrc
+      - run: pnpm build-only
+      - run: pnpm test:e2e --only-changed=origin/${{ github.base_ref }} --shard=${{ matrix.shardIndex }}/${{ matrix.shardTotal }}
+      - if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v7
+        with:
+          name: blob-report-${{ matrix.shardIndex }}
+          path: blob-report
+          retention-days: 1
+
+  merge-e2e-reports:
+    if: ${{ !cancelled() }}
+    needs: [ e2e ]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          show-progress: false
+      - uses: pnpm/action-setup@v5
+      - uses: actions/download-artifact@v8
+        with:
+          path: all-blob-reports
+          pattern: blob-report-*
+          merge-multiple: true
+      - run: pnpm dlx playwright merge-reports --reporter html ./all-blob-reports
+      - uses: actions/upload-artifact@v7
+        with:
+          name: html-report--attempt-${{ github.run_attempt }}
+          path: playwright-report
+          retention-days: 14

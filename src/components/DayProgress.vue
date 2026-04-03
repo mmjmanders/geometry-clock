@@ -28,7 +28,7 @@ const endPosition = computed<{ x: number; y: number }>(() => {
 </script>
 
 <template>
-  <g transform="rotate(-90)">
+  <g id="clock-progress" transform="rotate(-90)">
     <circle
       stroke-width="1"
       fill="none"
