@@ -8,19 +8,20 @@ const props = defineProps<{
   pos: 'left' | 'right'
 }>()
 
-const points = computed<string>(() =>
+const pointsArray = computed<{ x: number; y: number }[]>(() =>
   Array(props.digit)
     .fill(0)
     .map((_, i) => {
       const angle = (i * 360) / props.digit
       const angleRad = (angle * Math.PI) / 180
-      const x = props.radius * Math.cos(angleRad)
-      const y = props.radius * Math.sin(angleRad)
-      return { x, y }
-    })
-    .map(({ x, y }) => `${x},${y}`)
-    .join(' '),
+      return {
+        x: props.radius * Math.cos(angleRad),
+        y: props.radius * Math.sin(angleRad),
+      }
+    }),
 )
+
+const points = computed<string>(() => pointsArray.value.map(({ x, y }) => `${x},${y}`).join(' '))
 
 const id = computed<string>(() => `clock-${props.type}-${props.pos}`)
 </script>
@@ -28,7 +29,18 @@ const id = computed<string>(() => `clock-${props.type}-${props.pos}`)
 <template>
   <g :id="id" transform="rotate(-90)">
     <circle v-if="digit === 1" :cx="radius" cy="0" r="1" :class="type" stroke-width="1" />
-    <polygon v-else-if="digit > 1" :points="points" stroke-width="1" fill="none" :class="type" />
+    <template v-else-if="digit > 1">
+      <polygon :points="points" stroke-width="1" fill="none" :class="type" />
+      <circle
+        v-for="(point, i) in pointsArray"
+        :key="i"
+        :cx="point.x"
+        :cy="point.y"
+        r="1"
+        :class="type"
+        stroke-width="1"
+      />
+    </template>
   </g>
 </template>
 
