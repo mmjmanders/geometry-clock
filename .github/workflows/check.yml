@@ -19,6 +19,9 @@ jobs:
     needs: lint
     timeout-minutes: 60
     runs-on: ubuntu-latest
+    container:
+      image: mcr.microsoft.com/playwright:v1.59.1-noble
+      options: --user 1001
     strategy:
       fail-fast: false
       matrix:
@@ -38,7 +41,6 @@ jobs:
         with:
           node-version-file: .nvmrc
       - run: pnpm build-only
-      - run: pnpm exec playwright install --with-deps
       - run: pnpm test:e2e --only-changed=origin/${{ github.base_ref }} --shard=${{ matrix.shardIndex }}/${{ matrix.shardTotal }}
       - if: ${{ !cancelled() }}
         uses: actions/upload-artifact@v7
@@ -56,16 +58,12 @@ jobs:
         with:
           show-progress: false
       - uses: pnpm/action-setup@v5
-        with:
-          cache: true
-          run_install: |
-            - args: [--prefer-offline, --frozen-lockfile]
       - uses: actions/download-artifact@v8
         with:
           path: all-blob-reports
           pattern: blob-report-*
           merge-multiple: true
-      - run: pnpm exec playwright merge-reports --reporter html ./all-blob-reports
+      - run: pnpm dlx playwright merge-reports --reporter html ./all-blob-reports
       - uses: actions/upload-artifact@v7
         with:
           name: html-report--attempt-${{ github.run_attempt }}

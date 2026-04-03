@@ -42,6 +42,8 @@ export default defineConfig({
 
     /* Only on CI systems run the tests headless */
     headless: !!process.env.CI,
+
+    /* Timezone for the browsers to run in */
     timezoneId: 'Europe/Amsterdam',
   },
 
