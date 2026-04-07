@@ -41,7 +41,7 @@ jobs:
         with:
           node-version-file: .nvmrc
       - run: VITE_APP_VERSION=$(git rev-parse --short HEAD) pnpm build-only
-      - run: pnpm test:e2e --only-changed=origin/${{ github.base_ref }} --shard=${{ matrix.shardIndex }}/${{ matrix.shardTotal }}
+      - run: pnpm test:e2e --shard=${{ matrix.shardIndex }}/${{ matrix.shardTotal }}
       - if: ${{ !cancelled() }}
         uses: actions/upload-artifact@v7
         with:
