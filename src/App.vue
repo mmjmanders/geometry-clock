@@ -9,14 +9,14 @@ const version = VITE_APP_VERSION || 'dev'
 <template>
   <header>
     <h1>Geometry Clock</h1>
-    <div class="version">
-      <FontAwesomeIcon :icon="['fab', 'git-alt']" />
-      {{ version }}
-    </div>
   </header>
   <main>
     <GeometryClock />
   </main>
+  <footer>
+    <FontAwesomeIcon :icon="['fab', 'git-alt']" />
+    {{ version }}
+  </footer>
 </template>
 
 <style scoped></style>
