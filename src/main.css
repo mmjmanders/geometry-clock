@@ -1,7 +1,6 @@
 @import 'tailwindcss';
 
 @theme {
-  --font-sans: 'Montserrat Variable', sans-serif;
   --font-serif: 'Merriweather Variable', serif;
   --font-mono: 'Roboto Mono Variable', monospace;
 
