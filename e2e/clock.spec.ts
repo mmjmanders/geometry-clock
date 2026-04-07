@@ -47,18 +47,15 @@ test('should display progress indicator', async ({ page }) => {
     ].map((item) => [item.timestamp.getTime(), item]),
   ).values(),
 ].forEach(
-  (
-    {
-      timestamp,
-      hourLeftCircles,
-      hourRightCircles,
-      minuteLeftCircles,
-      minuteRightCircles,
-      secondLeftCircles,
-      secondRightCircles,
-    },
-    i,
-  ) => {
+  ({
+    timestamp,
+    hourLeftCircles,
+    hourRightCircles,
+    minuteLeftCircles,
+    minuteRightCircles,
+    secondLeftCircles,
+    secondRightCircles,
+  }) => {
     test(`testing visibility of SVG elements with ${timestamp.toISOString()}`, async ({ page }) => {
       await page.clock.setFixedTime(timestamp)
       await page.goto('/')
