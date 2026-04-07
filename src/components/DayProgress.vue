@@ -30,14 +30,14 @@ const endPosition = computed<{ x: number; y: number }>(() => {
 <template>
   <g id="clock-progress" transform="rotate(-90)">
     <circle
-      stroke-width="1"
+      stroke-width="1.5"
       fill="none"
       stroke-linecap="round"
       :r="radius"
       :stroke-dasharray="circumference"
       :stroke-dashoffset="dashOffset"
     />
-    <circle :cx="endPosition.x" :cy="endPosition.y" r="1" class="dot" stroke-width="1" />
+    <circle :cx="endPosition.x" :cy="endPosition.y" r="1.5" class="dot" stroke-width="1.5" />
   </g>
 </template>
 

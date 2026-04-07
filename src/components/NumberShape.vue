@@ -28,17 +28,17 @@ const id = computed<string>(() => `clock-${props.type}-${props.pos}`)
 
 <template>
   <g :id="id" transform="rotate(-90)">
-    <circle v-if="digit === 1" :cx="radius" cy="0" r="1" :class="type" stroke-width="1" />
+    <circle v-if="digit === 1" :cx="radius" cy="0" r="1.5" :class="type" stroke-width="1.5" />
     <template v-else-if="digit > 1">
-      <polygon :points="points" stroke-width="1" fill="none" :class="type" />
+      <polygon :points="points" stroke-width="1.5" fill="none" :class="type" />
       <circle
         v-for="(point, i) in pointsArray"
         :key="i"
         :cx="point.x"
         :cy="point.y"
-        r="1"
+        r="1.5"
         :class="type"
-        stroke-width="1"
+        stroke-width="1.5"
       />
     </template>
   </g>
