@@ -21,7 +21,6 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: mcr.microsoft.com/playwright:v1.59.1-noble
-      options: --user 1001
     strategy:
       fail-fast: false
       matrix:
@@ -30,7 +29,6 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
-          fetch-depth: 0
           show-progress: false
       - uses: pnpm/action-setup@v5
         with:
@@ -40,8 +38,11 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version-file: .nvmrc
+      - run: pnpm exec playwright install chrome msedge
       - run: VITE_APP_VERSION=$(git rev-parse --short HEAD) pnpm build-only
       - run: pnpm test:e2e --shard=${{ matrix.shardIndex }}/${{ matrix.shardTotal }}
+        env:
+          HOME: /root
       - if: ${{ !cancelled() }}
         uses: actions/upload-artifact@v7
         with:
